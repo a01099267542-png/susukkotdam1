@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주 독채 스테이 - 진정한 쉼의 가치</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jeju: {
+                            stone: '#3A3D40',
+                            sand: '#F2E8DF',
+                            ocean: '#024059',
+                            warm: '#D99873',
+                            leaf: '#8DA691'
+                        },
+                        accent: '#C5A48A'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans KR', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F7F5;
+            color: #2D2D2D;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+        .image-zoom:hover img {
+            transform: scale(1.05);
+        }
+        .image-zoom img {
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full relative">
+                <img src="https://opal.google/board/blobs/3dc02ddb-2a34-4dce-91c5-64ae88432add" alt="따스한 채광이 거실 깊숙이 들어오는 평화롭고 감성적인 숙소 전경" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/30"></div>
+            </div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4">
+            <p class="font-display text-white/90 tracking-[0.3em] uppercase text-sm mb-6 reveal">Private Stay Experience</p>
+            <h1 class="font-serif text-5xl md:text-7xl text-white mb-8 reveal">잘 쉬는 방법을 아는 집</h1>
+            <p class="text-white/80 max-w-2xl mx-auto font-light leading-relaxed reveal">
+                바쁜 일상의 소음은 잠시 꺼두셔도 좋습니다. <br class="hidden md:block">
+                오롯이 당신의 휴식에만 집중할 수 있도록 설계된 제주 독채 스테이에서 <br class="hidden md:block">
+                진정한 '쉼'의 가치를 발견해 보세요.
+            </p>
+            <div class="mt-12 reveal">
+                <a href="#booking" class="bg-white text-jeju-stone px-10 py-4 rounded-full font-medium hover:bg-jeju-warm hover:text-white transition-all duration-300 shadow-xl">
+                    공간 둘러보기
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 scroll-indicator text-white text-center">
+            <p class="text-[10px] uppercase tracking-widest mb-2 opacity-70">Scroll Down</p>
+            <div class="w-[1px] h-12 bg-white/40 mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- Content Intro -->
+    <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <div class="reveal">
+            <span class="text-jeju-warm font-serif italic text-xl mb-4 block">Natural Connection</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-jeju-stone">자연의 빛과 바람이 머무는 자리</h2>
+            <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                넓은 창을 통해 들어오는 제주의 자연광이 공간을 가득 채웁니다. <br>
+                원목의 따뜻함과 미니멀한 인테리어가 마음의 안정을 선사합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sleeping Space Section -->
+    <section class="pb-24 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 image-zoom overflow-hidden rounded-3xl shadow-2xl reveal">
+                <img src="https://opal.google/board/blobs/84273f63-6aea-4d52-b3ce-b533d2923c69" alt="편백나무 프레임과 호텔급 화이트 침구" class="w-full h-[600px] object-cover">
+            </div>
+            <div class="order-1 md:order-2 space-y-8 pl-0 md:pl-12 reveal">
+                <h3 class="text-4xl font-serif text-jeju-stone leading-tight">최상의 숙면을 향한<br><span class="text-jeju-warm italic">세심한 배려</span></h3>
+                <div class="space-y-6 text-gray-600 leading-relaxed">
+                    <p>은은한 편백 향이 감도는 침실에서 '수면밀도' 매트리스가 제공하는 깊은 잠을 경험하세요. 당신의 체형과 취향에 맞는 베개를 선택할 수 있는 옵션을 제공합니다.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-jeju-sand flex items-center justify-center text-jeju-warm font-bold">01</span>
+                            <span>정갈하게 정돈된 호텔급 80수 화이트 침구</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-jeju-sand flex items-center justify-center text-jeju-warm font-bold">02</span>
+                            <span>수면밀도 매트리스 & 맞춤형 베개 옵션</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <span class="w-10 h-10 rounded-full bg-jeju-sand flex items-center justify-center text-jeju-warm font-bold">03</span>
+                            <span>천연 편백나무 프레임의 피톤치드 효과</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Bento Grid Style) -->
+    <section class="py-24 bg-jeju-stone text-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center reveal">
+                <h2 class="text-4xl font-serif mb-4">조용한 쉼 & 와우쉼팡</h2>
+                <div class="w-20 h-1 bg-jeju-warm mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8">
+                <!-- Reading Space -->
+                <div class="md:col-span-5 glass-card p-10 rounded-[40px] flex flex-col justify-center reveal">
+                    <h4 class="text-2xl font-bold mb-6 text-jeju-warm">조용한 쉼의 기록</h4>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        마련된 독서 공간에서 스페셜티 커피 한 잔과 함께 좋아하는 책에 몰입하거나, 준비된 필사 노트에 마음을 옮겨 적으며 나만의 시간을 가져보세요.
+                    </p>
+                </div>
+
+                <!-- Wow Shimpang Image & Content -->
+                <div class="md:col-span-7 group relative overflow-hidden rounded-[40px] shadow-2xl reveal">
+                    <img src="https://opal.google/board/blobs/f96c60bf-b433-4a30-b931-67ad8e439945" alt="와우쉼팡 족욕탕과 보드게임" class="w-full h-full min-h-[450px] object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-10">
+                        <h4 class="text-3xl font-serif mb-4">와우쉼팡 : 촌캉스 감성</h4>
+                        <p class="text-gray-200 max-w-lg">
+                            옛 공간을 개조한 '와우쉼팡'에서는 따뜻한 족욕과 보드게임을 즐길 수 있습니다. 현대적인 편안함과 시골의 정겨움이 공존합니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nature & BBQ Section -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-1/2 reveal">
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-4">
+                                <img src="https://opal.google/board/blobs/503cff0b-bffa-407c-8b3d-3d5a313bdcd1" alt="잔디마당" class="rounded-2xl w-full h-64 object-cover">
+                                <img src="https://opal.google/board/blobs/e860f3af-78a9-4c29-815d-5a51a320f1e6" alt="계절꽃" class="rounded-2xl w-full h-48 object-cover">
+                            </div>
+                            <div class="pt-12">
+                                <img src="https://opal.google/board/blobs/accfba06-1f52-4fd9-8f7c-01247988eb0a" alt="바베큐" class="rounded-2xl w-full h-96 object-cover shadow-lg">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-jeju-warm rounded-full flex items-center justify-center text-white font-serif italic text-xl -rotate-12 shadow-xl z-20">
+                            BBQ & Fire
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 space-y-10 reveal">
+                    <div>
+                        <h3 class="text-3xl font-bold text-jeju-stone mb-4">자연이 주는 가장 큰 위로</h3>
+                        <p class="text-gray-600 leading-relaxed">정성스럽게 가꾼 잔디마당과 계절꽃 사이를 산책하며 제주의 계절을 오감으로 느껴보세요. 돌담 아래 피어난 작은 생명들이 당신을 반깁니다.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-jeju-stone mb-4">별빛 아래 불멍 & 바베큐</h3>
+                        <p class="text-gray-600 leading-relaxed">밤이 되면 마당에서 즐기는 바베큐와 타오르는 장작불을 바라보는 '불멍' 타임이 당신의 하루를 완벽하게 마무리해 줍니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section & Booking -->
+    <section id="booking" class="py-24 bg-jeju-sand/30 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-[50px] shadow-2xl overflow-hidden border border-jeju-sand/50 reveal">
+                <div class="h-96 relative overflow-hidden group">
+                    <img src="https://opal.google/board/blobs/c1c1fe18-f5c0-452e-8027-b38d38e0e209" alt="낭만적인 야경" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        <div class="text-center px-6">
+                            <p class="text-white text-xl md:text-2xl font-serif italic mb-2">"오늘 밤, 제주의 별 아래서 잠드는 상상을 해보세요."</p>
+                            <p class="text-white/80">당신만을 위한 완벽한 휴식이 기다리고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-12">
+                    <div class="grid md:grid-cols-2 gap-12 mb-12 border-b border-gray-100 pb-12">
+                        <div>
+                            <h5 class="text-sm font-bold uppercase tracking-widest text-jeju-warm mb-6">Stay Information</h5>
+                            <ul class="space-y-4 text-jeju-stone">
+                                <li class="flex justify-between"><span>침실 2개 / 침대 2개 / 욕실 2개</span></li>
+                                <li class="flex justify-between"><span>체크인</span> <span>16:00</span></li>
+                                <li class="flex justify-between"><span>체크아웃</span> <span>11:00</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-bold uppercase tracking-widest text-jeju-warm mb-6">Location</h5>
+                            <p class="text-jeju-stone leading-relaxed">
+                                제주의 고즈넉한 마을에 위치하여 프라이빗한 휴식이 가능하며, 인근 해변과 맛집으로의 접근성도 뛰어납니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Airbnb Widget Content Based on Request -->
+                    <div class="text-center">
+                        <p class="text-xl font-bold text-jeju-stone mb-8">지금 바로 제주에서의 휴식을 예약하세요</p>
+                        
+                        <div class="inline-block w-full max-w-[450px] bg-gray-50 rounded-2xl p-4 shadow-inner border border-gray-100">
+                            <div class="airbnb-embed-frame" data-id="1509403800948279656" data-view="home" data-hide-price="true" style="width: 100%; height: 300px; margin: auto;">
+                                <div class="flex flex-col items-center justify-center h-full space-y-4">
+                                    <div class="flex items-center gap-1 text-red-500">
+                                        <svg class="w-6 h-6 fill-current" viewBox="0 0 32 32"><path d="M16 1c2.008 0 3.463.963 4.751 3.269l.533 1.025c1.954 3.83 6.114 12.54 7.1 14.836l.145.353c.667 1.591.91 2.472.96 3.396l.01.415.001.228c0 4.062-2.877 6.478-6.357 6.478-2.224 0-4.556-1.258-6.709-3.386l-.257-.26-.172-.179h-.011l-.176.185c-2.044 2.1-4.392 3.415-6.701 3.619l-.266.022c-3.481 0-6.358-2.416-6.358-6.478 0-.442.026-.882.083-1.322l.069-.475c.341-1.921 1.523-4.664 3.42-8.581l.485-.989C7.886 4.717 9.537 1 11.64 1h4.36zm0 2c-1.352 0-2.483.791-3.615 2.809l-.497.989C9.972 10.655 8.86 13.275 8.528 15.15l-.062.428c-.046.347-.066.697-.066 1.05 0 2.923 1.94 4.478 4.358 4.478 1.83 0 3.847-1.077 5.753-3.036l.204-.216.204.214c1.847 1.897 3.868 2.981 5.751 3.037l.259.001c2.417 0 4.357-1.555 4.357-4.478 0-1.066-.358-2.181-.925-3.535l-.151-.36c-.96-2.235-5.076-10.852-6.993-14.61l-.547-1.052C19.141 3.25 18.067 3 16.94 3H16zm0 13a3 3 0 100 6 3 3 0 000-6z"></path></svg>
+                                        <span class="font-bold text-xl">airbnb</span>
+                                    </div>
+                                    <a href="https://www.airbnb.co.kr/rooms/1509403800948279656?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" target="_blank" class="text-jeju-stone hover:text-jeju-warm font-medium underline">에어비앤비에서 보기</a>
+                                    <a href="https://www.airbnb.co.kr/rooms/1509403800948279656?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" target="_blank" rel="nofollow" class="text-gray-500 text-sm">집 · 제주 · ★5.0 · 침실 2개 · 침대 2개 · 욕실 2개</a>
+                                </div>
+                                <script async="" src="https://www.airbnb.co.kr/embeddable/airbnb_jssdk"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll(".reveal");
+
+        function reveal() {
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                let elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Initial check
+        window.addEventListener("load", reveal);
+    </script>
+</body>
+</html>
